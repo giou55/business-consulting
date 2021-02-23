@@ -1,660 +1,1369 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Business Consulting</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/bootstrap-grid.css">
-  <link rel="stylesheet" href="./css/style.css">
-
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: Arial;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
-    .cards p {
-      margin-bottom: 0;
-    }
-    /* Create four equal columns that sits next to each other */
-    .column {
-      flex: 25%;
-      max-width: 25%;
-      padding: 0 4px;
-    }
-    .column div {
-      width:100%;
-      margin-top: 0.6rem;
-      padding: 0.5rem;
-      background-color: #f9f9fa;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media (max-width: 800px) {
-      .column {
-        flex: 50%;
-        max-width: 50%;
-      }
-    }
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media (max-width: 600px) {
-      .column {
-        flex: 100%;
-        max-width: 100%;
-      }
-    }
-  </style>
-
-</head>
-
-<body>
-
-  <div class="container-fluid" id="wrapper">
-    <div class="row">
-      <div class="col-0 col-lg-1"></div>
-
-      <div class="col-12 col-lg-10"  id="content">
-          <div class="container-fluid" id="header">
-            <div class="row">
-
-              <div class="col-12 col-md-2" id="logo">
-                <img class="img-fluid" src="./images/logo1.png" alt="Business Consulting">
-              </div>
-
-              <div class="col-12 col-md-3" id="title">
-                <h2>Business<br>Consulting</h2>
-              </div>
-
-              <div class="col-0 col-md-5">
-              </div>
-
-              <div class="col-0 col-md-2" id="clock">
-                <canvas id="canvas" width="90" height="90" style="background: rgba(255, 255, 255, 0);"></canvas>
-              </div>
-
-            </div>
-          </div>
-
-
-          <div class="container-fluid" id="vertical-menu">
-            <div class="row" id="main-menu">
-              <div class="col-12">
-                <ul class="nav flex-column text-center">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#map">Strategy Map</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#balance">Balance Scorecard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#strategy">Strategy Statement</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#vision">Vision, Mission & Core Values</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="container-fluid" id="horizontal-menu">
-
-            <div class="row" id="main-menu">
-              
-              <div class="col-12">
-                <ul class="nav text-center">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#map">Strategy Map</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#balance">Balance Scorecard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#strategy">Strategy Statement</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#vision">Vision, Mission & Core Values</a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-
-          <div class="container-fluid" id="map">
-            <div class="row">
-              <div class="col-12 text-center">
-                <h4>Strategy Map</h4>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="container-fluid" style="margin-top: 0;">
-            <div class="row">
-
-              <div class="col-0 col-xl-2" id="perspectives">
-                <p>Financial<br>Perspectives</p>
-                <p>Customer<br>Perspectives</p>
-                <p>Internal<br>Processes<br>Perspectives</p>
-                <p>Learning<br>& Growth<br>Perspectives</p>
-              </div>
-
-              <div class="col-12 col-xl-10" id="svg-map">
-                <img class="img-fluid" src="./images/map.jpg" alt="Strategy Map">
-
-
-                <svg width="100%" height="100%" viewBox="0 0 1000 1000">
-
-                    <rect x="-234" y="10" width="1468" height="220" style="fill:#d0d0d0;"></rect>
-                    <rect x="-234" y="420" width="1468" height="260" style="fill:#bbcde5;"></rect>
-                    <rect x="-234" y="690" width="1468" height="300" style="fill:#d0d0d0;"></rect>
-
-
-                    <ellipse cx="12" cy="146" rx="129" ry="39" style="fill:#375f93;stroke:none;"></ellipse>
-                    <text x="40" y="108" text-anchor="middle" alignment-baseline="central" style="fill:#fff; font-size: 1.5rem;">
-                      <tspan x="7" dy="28">Increase</tspan>
-                      <tspan x="7" dy="28">Operating Revenue</tspan>
-                    </text>
-
-                    <ellipse cx="316" cy="70" rx="146" ry="42" style="fill:#10263e;stroke:none;"></ellipse>
-                    <text x="60" y="28" text-anchor="middle" alignment-baseline="central" style="fill:#fff; font-size: 1.5rem;">
-                      <tspan x="316" dy="31">Increase</tspan>
-                      <tspan x="316" dy="31">Shareholder Value</tspan>
-                    </text>
-
-                    <ellipse cx="690" cy="156" rx="144" ry="42" style="fill:#375f93;stroke:none;"></ellipse>
-                    <text x="0" y="118" text-anchor="middle" alignment-baseline="central" style="fill:#fff; font-size: 1.5rem;">
-                      <tspan x="690" dy="30">Source Maximum</tspan>
-                      <tspan x="690" dy="30">& Low Cost Capital</tspan>
-                    </text>
-
-                    <ellipse cx="984" cy="113" rx="108" ry="46" style="fill:#375f93;stroke:none;"></ellipse>
-                    <text x="0" y="80" text-anchor="middle" alignment-baseline="central" style="fill:#fff; font-size: 1.5rem;">
-                      <tspan x="988" dy="30">Maximumize Cost</tspan>
-                      <tspan x="988" dy="30">Effectiveness</tspan>
-                    </text>
-
-                    <ellipse cx="-42" cy="320" rx="170" ry="60" style="fill:#afc9ee;stroke:none;" />
-                    <text x="0" y="274" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                      <tspan x="-36" dy="28">Become my preferred</tspan>
-                      <tspan x="-36" dy="28">supplier by knowing and</tspan>
-                      <tspan x="-36" dy="28">meeting my needs</tspan>
-                    </text>
-
-                    <ellipse cx="370" cy="324" rx="150" ry="64" style="fill:#afc9ee;stroke:none;" />
-                    <text x="0" y="264" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                      <tspan x="374" dy="28">Transport my</tspan>
-                      <tspan x="374" dy="28">cargoes with large,</tspan>
-                      <tspan x="374" dy="28">modern and economical</tspan>
-                      <tspan x="374" dy="28">vessels</tspan>
-                    </text>
-
-                    <ellipse cx="762" cy="320" rx="102" ry="58" style="fill:#afc9ee;stroke:none;"></ellipse>
-                    <text x="0" y="272" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                      <tspan x="764" dy="27">Provide me</tspan>
-                      <tspan x="764" dy="27">with a reliable</tspan>
-                      <tspan x="764" dy="27">overall service</tspan>
-                    </text>
-
-                    <ellipse cx="1060" cy="300" rx="110" ry="50" style="fill:#afc9ee;stroke:none;"></ellipse>
-                    <text x="0" y="255" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                      <tspan x="1060" dy="27">Deliver my</tspan>
-                      <tspan x="1060" dy="27">cargoes timely</tspan>
-                      <tspan x="1060" dy="27">and intact</tspan>
-                    </text>
-
-                    <ellipse cx="-98" cy="510" rx="130" ry="62" style="fill:#d9d9d9;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="470" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                      <tspan x="-95" dy="30">Identify &amp; Respond</tspan>
-                      <tspan x="-95" dy="30">to Customers Needs</tspan>
-                    </text>
-
-                    <ellipse cx="250" cy="500" rx="130" ry="70" style="fill:#d9d9d9;stroke:#777;stroke-width:3;"></ellipse>
-                      <text x="0" y="432" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="254" dy="30">Improve</tspan>
-                        <tspan x="254" dy="30">Environmental &</tspan>
-                        <tspan x="254" dy="30">Safety Performance</tspan>
-                        <tspan x="254" dy="30">Standards</tspan>
-                    </text>
-
-                    <ellipse cx="634" cy="507" rx="168" ry="53" style="fill:#d9d9d9;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="466" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="640" dy="30">Select Appropriate</tspan>
-                        <tspan x="640" dy="30">Suppliers &amp; Contractors</tspan>
-                    </text>
-
-                    <ellipse cx="1038" cy="487" rx="180" ry="56" style="fill:#d9d9d9;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="435" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="1038" dy="29">Achieve Vessels'</tspan>
-                        <tspan x="1038" dy="29">Contracted Performance &amp;</tspan>
-                        <tspan x="1038" dy="29">Maximize Reliability</tspan>
-                    </text>
-
-                    <ellipse cx="114" cy="628" rx="116" ry="42" style="fill:#d9d9d9;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="114" dy="623">Manage Risks</tspan>
-                        <tspan x="114" dy="29">Effectively</tspan>
-                    </text>
-
-                    <ellipse cx="490" cy="626" rx="132" ry="44" style="fill:#d9d9d9;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="490" dy="617">Maximize</tspan>
-                        <tspan x="490" dy="29">Vessels Utilization</tspan>
-                    </text>
-
-                    <ellipse cx="846" cy="607" rx="110" ry="62" style="fill:#d9d9d9;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="848" dy="586">Achieve Cost</tspan>
-                        <tspan x="848" dy="29">Leadership in</tspan>
-                        <tspan x="848" dy="29">our Segment</tspan>
-                    </text>
-
-                    <ellipse cx="15" cy="775" rx="230" ry="78" style="fill:#ffcfcf;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="15" dy="742">Deploy an IT platform</tspan>
-                        <tspan x="15" dy="30">which supports our decision</tspan>
-                        <tspan x="15" dy="30">making processes incl. developing</tspan>
-                        <tspan x="15" dy="30">ckarterers' data</tspan>
-                    </text>
-
-                    <ellipse cx="302" cy="913" rx="178" ry="74" style="fill:#ffcfcf;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="302" dy="876">Recruit and retain</tspan>
-                        <tspan x="302" dy="29">appropriately skilled</tspan>
-                        <tspan x="302" dy="29">strategy focused &amp; </tspan>
-                        <tspan x="302" dy="29">engaged employees</tspan>
-                    </text>
-
-                    <ellipse cx="452" cy="765" rx="142" ry="56" style="fill:#ffcfcf;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="460" dy="747">Select and retain</tspan>
-                        <tspan x="460" dy="29">appropriate crews</tspan>
-                        <tspan x="460" dy="29">for our ships</tspan>
-                    </text>
-
-                    <ellipse cx="806" cy="760" rx="138" ry="60" style="fill:#ffcfcf;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="808" dy="745">Create an internal</tspan>
-                        <tspan x="808" dy="29">customer-centric</tspan>
-                        <tspan x="808" dy="29">culture</tspan>
-                    </text>
-
-                    <ellipse cx="700" cy="906" rx="178" ry="68" style="fill:#ffcfcf;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="700" dy="874">Align, reward &amp;</tspan>
-                        <tspan x="700" dy="29">encourage our employees'</tspan>
-                        <tspan x="700" dy="29">success and passion</tspan>
-                        <tspan x="700" dy="29">for excellence</tspan>
-                    </text>
-
-                    <ellipse cx="1092" cy="840" rx="134" ry="142" style="fill:#ffcfcf;stroke:#777;stroke-width:3;"></ellipse>
-                    <text x="0" y="0" text-anchor="middle" alignment-baseline="central" style="fill:#000; font-size: 1.5rem;">
-                        <tspan x="1096" dy="732">Develop</tspan>
-                        <tspan x="1096" dy="29">strategic</tspan>
-                        <tspan x="1096" dy="29">competencies</tspan>
-                        <tspan x="1096" dy="29">&amp; the means</tspan>
-                        <tspan x="1096" dy="29">for continuous</tspan>
-                        <tspan x="1096" dy="29">targeted</tspan>
-                        <tspan x="1096" dy="29">learning and</tspan>
-                        <tspan x="1096" dy="29">knowledge</tspan>
-                        <tspan x="1096" dy="29">sharing</tspan>
-                    </text>
-
-
-                    <path id="lineB" marker-end="url(#arrow1)" stroke-width="11" fill="none" stroke="red" d="M832,144 L870,126">
-                    </path>
-
-                    <path id="lineC" marker-end="url(#arrow1)" stroke-width="9" fill="none" stroke="red" d="M908,444 L848,365">
-                    </path>
-
-                    <path id="lineD" marker-end="url(#arrow1)" stroke-width="11" fill="none" stroke="red" d="M1060,427 L1060,360">
-                    </path>
-
-                    <path id="lineE" marker-end="url(#arrow1)" stroke-width="11" fill="none" stroke="red" d="M-86,442 L-86,388">
-                    </path>
-
-                    <path id="lineF" marker-end="url(#arrow1)" stroke-width="10" fill="none" stroke="red" d="M108,114 L166,88">
-                    </path>
-
-                    <path id="lineG" marker-end="url(#arrow1)" stroke-width="12" fill="none" stroke="red" d="M-158,706 L-158,656">
-                    </path>
-
-                    <path id="lineH" marker-end="url(#arrow1)" stroke-width="12" fill="none" stroke="red" d="M298,706 L298,656">
-                    </path>
-
-                    <path id="lineI" marker-end="url(#arrow1)" stroke-width="12" fill="none" stroke="red" d="M674,706 L674,656">
-                    </path>
-
-                    <path id="lineK" marker-end="url(#arrow1)" stroke-width="12" fill="none" stroke="red" d="M1190,706 L1190,656">
-                    </path>
-
-                    <path id="angle" marker-end="url(#arrow1)" stroke-width="12" fill="none" stroke="red" d="M-190,286 L-190,146 L-128,146">
-                    </path>
-      
-                    <defs>
-                      <marker id="arrow1" viewBox="0 0 20 20" refX="2" refY="5"
-                        markerWidth="6" markerHeight="8"
-                        orient="auto-start-reverse">
-                        <path d="M 0 0 L 5 5 L 0 10 z" fill="red" />
-                      </marker>
-
-                      <marker id="arrow2" viewBox="0 0 8 8" refX="2" refY="5"
-                        markerWidth="6" markerHeight="8"
-                        orient="auto-start-reverse">
-                        <path d="M 0 0 L 5 5 L 0 10 z" fill="red" />
-                      </marker>
-                    </defs>
-
-                    <path 
-                      id="line0"
-                      marker-end="url(#arrow1)"
-                      stroke-width="10"
-                      fill="none"
-                      stroke="red">
-                      <animate
-                      dur="3s"
-                      repeatCount="1"
-                      attributeName="d"
-                      values="M242,288 L242,288; M242,288 L132,176"
-                      fill="freeze" />
-                    </path>
-
-                    <path 
-                      id="line1"
-                      marker-end="url(#arrow1)"
-                      stroke-width="10"
-                      fill="none"
-                      stroke="red">
-                      <animate
-                      dur="4s"
-                      repeatCount="1"
-                      attributeName="d"
-                      values="M675,282 L675,282; M675,282 L186,182"
-                      fill="freeze" />
-                    </path>
-
-                    <path
-                      id="line2"
-                      marker-end="url(#arrow1)"
-                      stroke-width="10"
-                      fill="none"
-                      stroke="red">
-                      <animate
-                      dur="6s"
-                      repeatCount="1"
-                      attributeName="d"
-                      values="M962,268 L962,268; M962,268 L182,150"
-                      fill="freeze" />
-                    </path>
-
-                    <path
-                      id="line3"
-                      marker-end="url(#arrow1)"
-                      stroke-width="10"
-                      fill="none"
-                      stroke="red">
-                      <animate
-                      dur="4s"
-                      repeatCount="1"
-                      attributeName="d"
-                      values="M876,102 L876,102; M876,102 L474,74"
-                      fill="freeze" />
-                    </path>
-
-                    <path
-                      id="line4"
-                      marker-end="url(#arrow1)"
-                      stroke-width="8"
-                      fill="none"
-                      stroke="red">
-                      <animate
-                      dur="5s"
-                      repeatCount="1"
-                      attributeName="d"
-                      values="M386,486 L386,486; M386,486 L998,352"
-                      fill="freeze" />
-                    </path>
-
-                    <path
-                      id="line5"
-                      marker-end="url(#arrow1)"
-                      stroke-width="12"
-                      fill="none"
-                      stroke="red">
-                      <animate
-                      dur="4s"
-                      repeatCount="1"
-                      attributeName="d"
-                      values="M364,456 L364,456; M364,456 L652,326"
-                      fill="freeze" />
-                    </path>
-
-                    <path id="curve1" marker-end="url(#arrow2)" stroke-width="4" fill="none" stroke="red" d="M 200,660 C 1714,862 1124,160 1088,140">
-                    </path>
-
-
-                    <path id="curve2" stroke-width="4" fill="none" stroke="red" d="M 578,662 C 720,710 730,686 730,698">
-                    </path>
-
-                    <path id="curve3" stroke-width="4" fill="none" stroke="red" d="M 958,618 C 975,626 1080,624 1174,570">
-                    </path>
-
-                    <path id="curve4" stroke-width="4" fill="none" stroke="red" d="M 802,510 C 975,560 1080,590 1204,530">
-                    </path>
-
-
-                    <text x="0" y="10" text-anchor="left" alignment-baseline="central" fill="#000" font-size="1.6rem" font-weight="bold">
-                      <tspan x="-226" dy="28">Revenue</tspan>
-                      <tspan x="-226" dy="28">Growth</tspan>
-                    </text>
-                    <text x="0" y="10" text-anchor="left" alignment-baseline="central" fill="#000" font-size="1.6rem" font-weight="bold">
-                      <tspan x="1060" dy="28">Productivity</tspan>
-                      <tspan x="1060" dy="28">Improvement</tspan>
-                    </text>
-
-                </svg>
-
-              </div>
-
-            </div>
-          </div>
-
-
-          <div class="container-fluid" id="balance">
-
-            <div class="row">
-
-              <div class="col-0 col-sm-1"></div>
-
-              <div class="col-12 col-sm-10 text-center">
-                <h4>Balance Scorecard</h4>
-
-
-
-                <div class="cards"> 
-
-                  <div class="column">
-                    <div>
-                      <h2>Increase Shareholder Value</h2>
-                      <p>Return on Net Operating Assets (RONOA) = EBIT / (Operating Assets - NIB Liabilities)<br>Return on Equity = Net Profit after Tax / Average Equity Economic Value Added (EVA)</p>
-                    </div>
-                    <div>
-                      <h2>Increase Operating Revenue</h2>
-                      <p>Iason's Average daily TCE rate / BPI (4TC routes rate)</p>
-                    </div>
-                    <div>
-                      <h2>Maximize Cost Effectiveness</h2>
-                      <p>% change in average daily OpEx (per vessel) over previous fiscal period (Inflation-Adjusted)<br>% change in Iason's G&A expenses over previous fiscal period (in local currency - €)</p>
-                    </div>
-                    <div>
-                      <h2>Source Maximum & Low Cost Capital</h2>
-                      <p>Average days payable<br>Average effective interest rate – LIBOR Net Debt / Net Operating Assets</p>
-                    </div>
-                  </div>
-                  
-                  <div class="column">
-                    <div>
-                      <h2>Deliver my cargoes timely and intact</h2>
-                      <p>% on-time deliveries (Number of discharges within charter-party time slot divided by total number of discharges)<br>% of discharges giving rise to cargo claims (Number of claims for cargo damage divided by total number of discharges)</p>
-                    </div>
-                    <div>
-                      <h2>Transport my cargoes with large, modern and economical vessels</h2>
-                      <p>Average customer rating for vessels' cargo intake capacity, fuel efficiency and age compared to average Panamax (Cust. survey)</p>
-                    </div>
-                    <div>
-                      <h2>Become my preferred supplier by knowing and meeting my needs</h2>
-                      <p>Average customer rating in overall satisfaction (Cust. survey)<br>% of charterers considering Iason as a preferred supplier (Cust. survey)</p>
-                    </div>
-                  </div> 
-
-                  <div class="column">
-                    <div>
-                      <h2>Identify & Respond to Customers Needs</h2>
-                      <p># of actions taken to respond to customer needs</p>
-                    </div>
-                    <div>
-                      <h2>Manage Risks Effectively</h2>
-                      <p># of vessel detentions - Average # of detentions per vessel per year (in scored period)<br>Losses incurred from manageable risks - Net total losses (costs &amp; lost revenue in scored period) due to the incurrence of manageable business risks divided by total opex (prior fiscal period)</p>
-                    </div>
-                    <div>
-                      <h2>Improve Environmental & Safety Performance Standards</h2>
-                      <p># of environmental &amp; safety non-conformities - identified internally per vessel per year<br># of PSC findings/deficiencies - per vessel per year relevant to Environmental &amp; Safety Regulations</p>
-                    </div>
-                  </div> 
-
-                  <div class="column">
-                    <div>
-                      <h2>Select Appropriate Suppliers & Contractors</h2>
-                      <p>% of procurement orders with identified failures or non-conformities</p>
-                    </div>
-                    <div>
-                      <h2>Achieve Cost Leadership in our Segment</h2>
-                      <p>% of procurement orders with identified failures or non-conformities% of average daily OpEx / industry average (per vessel)</p>
-                    </div>
-                    <div>
-                      <h2>Maximize Vessels Utilization</h2>
-                      <p>% of available days (on charter + idle + ballast days) / ownership days<br>% of days on charter / available days<br>Average # of days rendered off hire while on charter</p>
-                    </div>
-                    <div>
-                      <h2>Provide me with a reliable overall service</h2>
-                      <p># of charterers' complaints per vessel<br># of incidents giving rise to hire deductions while chartered per vessel</p>
-                    </div>
-                  </div>                 
-
-                </div>
-
-              </div>
-
-              <div class="col-0 col-sm-1"></div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="container-fluid" id="strategy">
-
-            <div class="row">
-
-              <div class="col-0 col-sm-1"></div>
-
-              <div class="col-12 col-sm-10 text-center">
-                <h4>Strategy Statement</h4>
-                <p>By leveraging our long shipping experience and increasingly cost-efficient operation, as well as, through carefully timed and negotiated acquisitions of modern medium-sized bulk carriers, we will grow and rejuvenate our fleet and provide our customers with distinctly reliable seaborne transportation services focused on the coal, grains, fertilizers and minerals trades, while generating superior returns for our shareholders and steadily increasing our footprint.</p>
-              </div>
-
-              <div class="col-0 col-sm-1"></div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="container-fluid" id="vision">
-            <div class="row">
-
-              <div class="col-0 col-sm-1"></div>
-
-              <div class="col-12 col-sm-10 text-center">
-                <h4>Vision, Mission & Core Values</h4>
-
-                <h5>Vision</h5>
-                <p>To be recognised as a leading shipping company in the global seaborne transportation of coal, minerals, grains and fertilizers with an aggregate annual cargo volume lift of 10 million tonnes by 2020.</p>
-
-                <h5>Mission</h5>
-                <p>MissionTo provide distinctly reliable seaborne transportation services to shippers, receivers of cargo and vessel operators in the dry bulk commodities industry.</p>
-
-                <h5>Core Values</h5>
-                <p>Our core values are founded on three distinct pillars: Safety, Reliability and Care.</p>
-                <ul>
-                  <li>Maximum safety –for our people, our vessels and our cargoes</li>
-                  <li>Reliable quality –for our services extended to our customers</li>
-                  <li>Continuous self-improvement –for our people, our infra-structure and our</li>
-                </ul>
-              </div>
-
-              <div class="col-0 col-sm-1"></div>
-
-            </div>
-          </div>
-
-
-          <div class="container-fluid" id="footer">
-            <div>
-              <p>Business Consulting 2017-2018</p>
-            </div>
-          </div>
-        </div>
-
-
-      <div class="col-0 col-lg-1"></div>
-    </div>
-  </div>
-
-
-<script>
-  $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("#main-menu a").on('click', function(event) {
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-     
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  });
-</script>
-
-<script src="./js/clock.js"></script>
-
-</body>
+	<head>
+		<title>Business Consulting</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<link rel="stylesheet" href="./css/bootstrap-grid.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				font-family: Arial;
+			}
+			.cards {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 4px;
+			}
+			.cards p {
+				margin-bottom: 0;
+			}
+			/* Create four equal columns that sits next to each other */
+			.column {
+				flex: 25%;
+				max-width: 25%;
+				padding: 0 4px;
+			}
+			.column div {
+				width: 100%;
+				margin-top: 0.6rem;
+				padding: 0.5rem;
+				background-color: #f9f9fa;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+			/* Responsive layout - makes a two column-layout instead of four columns */
+			@media (max-width: 800px) {
+				.column {
+					flex: 50%;
+					max-width: 50%;
+				}
+			}
+			/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+			@media (max-width: 600px) {
+				.column {
+					flex: 100%;
+					max-width: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid" id="wrapper">
+			<div class="row">
+				<div class="col-0 col-lg-1"></div>
+
+				<div class="col-12 col-lg-10" id="content">
+					<div class="container-fluid" id="header">
+						<div class="row" style="align-items: center">
+							<div class="col-6 col-md-3 col-lg-2" id="logo">
+								<img
+									class="img-fluid"
+									src="./images/logo1.png"
+									alt="Business Consulting"
+								/>
+							</div>
+
+							<div class="col-6 col-md-3" id="title">
+								<h2>Business<br />Consulting</h2>
+							</div>
+
+							<div class="col-0 col-md-4 col-lg-5"></div>
+
+							<div class="col-0 col-md-2" id="clock">
+								<canvas
+									id="canvas"
+									width="90"
+									height="90"
+									style="background: rgba(255, 255, 255, 0)"
+								></canvas>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid" id="vertical-menu">
+						<div class="row" id="main-menu">
+							<div class="col-12">
+								<ul class="nav flex-column text-center">
+									<li class="nav-item">
+										<a class="nav-link" href="#map"
+											>Strategy Map</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#balance"
+											>Balance Scorecard</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#strategy"
+											>Strategy Statement</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#vision"
+											>Vision, Mission & Core Values</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid" id="horizontal-menu">
+						<div class="row" id="main-menu">
+							<div class="col-12">
+								<ul class="nav text-center">
+									<li class="nav-item">
+										<a class="nav-link" href="#map"
+											>Strategy Map</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#balance"
+											>Balance Scorecard</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#strategy"
+											>Strategy Statement</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#vision"
+											>Vision, Mission & Core Values</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid" id="map">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h4>Strategy Map</h4>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid" style="margin-top: 0">
+						<div class="row">
+							<div class="col-0 col-xl-3" id="perspectives">
+								<p>Financial<br />Perspectives</p>
+								<p>Customer<br />Perspectives</p>
+								<p>Internal<br />Processes<br />Perspectives</p>
+								<p>Learning<br />& Growth<br />Perspectives</p>
+							</div>
+
+							<div class="col-12 col-xl-9" id="svg-map">
+								<img
+									class="img-fluid"
+									src="./images/map.jpg"
+									alt="Strategy Map"
+								/>
+
+								<svg
+									width="100%"
+									height="100%"
+									viewBox="0 0 1000 1000"
+								>
+									<rect
+										x="-234"
+										y="10"
+										width="1468"
+										height="220"
+										style="fill: #d0d0d0"
+									></rect>
+									<rect
+										x="-234"
+										y="420"
+										width="1468"
+										height="260"
+										style="fill: #bbcde5"
+									></rect>
+									<rect
+										x="-234"
+										y="690"
+										width="1468"
+										height="300"
+										style="fill: #d0d0d0"
+									></rect>
+
+									<ellipse
+										cx="12"
+										cy="146"
+										rx="129"
+										ry="39"
+										style="fill: #375f93; stroke: none"
+									></ellipse>
+									<text
+										x="40"
+										y="108"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #fff; font-size: 1.5rem"
+									>
+										<tspan x="7" dy="28">Increase</tspan>
+										<tspan x="7" dy="28">
+											Operating Revenue
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="316"
+										cy="70"
+										rx="146"
+										ry="42"
+										style="fill: #10263e; stroke: none"
+									></ellipse>
+									<text
+										x="60"
+										y="28"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #fff; font-size: 1.5rem"
+									>
+										<tspan x="316" dy="31">Increase</tspan>
+										<tspan x="316" dy="31">
+											Shareholder Value
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="690"
+										cy="156"
+										rx="144"
+										ry="42"
+										style="fill: #375f93; stroke: none"
+									></ellipse>
+									<text
+										x="0"
+										y="118"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #fff; font-size: 1.5rem"
+									>
+										<tspan x="690" dy="30">
+											Source Maximum
+										</tspan>
+										<tspan x="690" dy="30">
+											& Low Cost Capital
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="984"
+										cy="113"
+										rx="108"
+										ry="46"
+										style="fill: #375f93; stroke: none"
+									></ellipse>
+									<text
+										x="0"
+										y="80"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #fff; font-size: 1.5rem"
+									>
+										<tspan x="988" dy="30">
+											Maximumize Cost
+										</tspan>
+										<tspan x="988" dy="30">
+											Effectiveness
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="-42"
+										cy="320"
+										rx="170"
+										ry="60"
+										style="fill: #afc9ee; stroke: none"
+									/>
+									<text
+										x="0"
+										y="274"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="-36" dy="28">
+											Become my preferred
+										</tspan>
+										<tspan x="-36" dy="28">
+											supplier by knowing and
+										</tspan>
+										<tspan x="-36" dy="28">
+											meeting my needs
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="370"
+										cy="324"
+										rx="150"
+										ry="64"
+										style="fill: #afc9ee; stroke: none"
+									/>
+									<text
+										x="0"
+										y="264"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="374" dy="28">
+											Transport my
+										</tspan>
+										<tspan x="374" dy="28">
+											cargoes with large,
+										</tspan>
+										<tspan x="374" dy="28">
+											modern and economical
+										</tspan>
+										<tspan x="374" dy="28">vessels</tspan>
+									</text>
+
+									<ellipse
+										cx="762"
+										cy="320"
+										rx="102"
+										ry="58"
+										style="fill: #afc9ee; stroke: none"
+									></ellipse>
+									<text
+										x="0"
+										y="272"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="764" dy="27">
+											Provide me
+										</tspan>
+										<tspan x="764" dy="27">
+											with a reliable
+										</tspan>
+										<tspan x="764" dy="27">
+											overall service
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="1060"
+										cy="300"
+										rx="110"
+										ry="50"
+										style="fill: #afc9ee; stroke: none"
+									></ellipse>
+									<text
+										x="0"
+										y="255"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="1060" dy="27">
+											Deliver my
+										</tspan>
+										<tspan x="1060" dy="27">
+											cargoes timely
+										</tspan>
+										<tspan x="1060" dy="27">
+											and intact
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="-98"
+										cy="510"
+										rx="130"
+										ry="62"
+										style="
+											fill: #d9d9d9;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="470"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="-95" dy="30">
+											Identify &amp; Respond
+										</tspan>
+										<tspan x="-95" dy="30">
+											to Customers Needs
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="250"
+										cy="500"
+										rx="130"
+										ry="70"
+										style="
+											fill: #d9d9d9;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="432"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="254" dy="30">Improve</tspan>
+										<tspan x="254" dy="30">
+											Environmental &
+										</tspan>
+										<tspan x="254" dy="30">
+											Safety Performance
+										</tspan>
+										<tspan x="254" dy="30">Standards</tspan>
+									</text>
+
+									<ellipse
+										cx="634"
+										cy="507"
+										rx="168"
+										ry="53"
+										style="
+											fill: #d9d9d9;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="466"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="640" dy="30">
+											Select Appropriate
+										</tspan>
+										<tspan x="640" dy="30">
+											Suppliers &amp; Contractors
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="1038"
+										cy="487"
+										rx="180"
+										ry="56"
+										style="
+											fill: #d9d9d9;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="435"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="1038" dy="29">
+											Achieve Vessels'
+										</tspan>
+										<tspan x="1038" dy="29">
+											Contracted Performance &amp;
+										</tspan>
+										<tspan x="1038" dy="29">
+											Maximize Reliability
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="114"
+										cy="628"
+										rx="116"
+										ry="42"
+										style="
+											fill: #d9d9d9;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="114" dy="623">
+											Manage Risks
+										</tspan>
+										<tspan x="114" dy="29">
+											Effectively
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="490"
+										cy="626"
+										rx="132"
+										ry="44"
+										style="
+											fill: #d9d9d9;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="490" dy="617">Maximize</tspan>
+										<tspan x="490" dy="29">
+											Vessels Utilization
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="846"
+										cy="607"
+										rx="110"
+										ry="62"
+										style="
+											fill: #d9d9d9;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="848" dy="586">
+											Achieve Cost
+										</tspan>
+										<tspan x="848" dy="29">
+											Leadership in
+										</tspan>
+										<tspan x="848" dy="29">
+											our Segment
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="15"
+										cy="775"
+										rx="230"
+										ry="78"
+										style="
+											fill: #ffcfcf;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="15" dy="742">
+											Deploy an IT platform
+										</tspan>
+										<tspan x="15" dy="30">
+											which supports our decision
+										</tspan>
+										<tspan x="15" dy="30">
+											making processes incl. developing
+										</tspan>
+										<tspan x="15" dy="30">
+											ckarterers' data
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="302"
+										cy="913"
+										rx="178"
+										ry="74"
+										style="
+											fill: #ffcfcf;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="302" dy="876">
+											Recruit and retain
+										</tspan>
+										<tspan x="302" dy="29">
+											appropriately skilled
+										</tspan>
+										<tspan x="302" dy="29">
+											strategy focused &amp;
+										</tspan>
+										<tspan x="302" dy="29">
+											engaged employees
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="452"
+										cy="765"
+										rx="142"
+										ry="56"
+										style="
+											fill: #ffcfcf;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="460" dy="747">
+											Select and retain
+										</tspan>
+										<tspan x="460" dy="29">
+											appropriate crews
+										</tspan>
+										<tspan x="460" dy="29">
+											for our ships
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="806"
+										cy="760"
+										rx="138"
+										ry="60"
+										style="
+											fill: #ffcfcf;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="808" dy="745">
+											Create an internal
+										</tspan>
+										<tspan x="808" dy="29">
+											customer-centric
+										</tspan>
+										<tspan x="808" dy="29">culture</tspan>
+									</text>
+
+									<ellipse
+										cx="700"
+										cy="906"
+										rx="178"
+										ry="68"
+										style="
+											fill: #ffcfcf;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="700" dy="874">
+											Align, reward &amp;
+										</tspan>
+										<tspan x="700" dy="29">
+											encourage our employees'
+										</tspan>
+										<tspan x="700" dy="29">
+											success and passion
+										</tspan>
+										<tspan x="700" dy="29">
+											for excellence
+										</tspan>
+									</text>
+
+									<ellipse
+										cx="1092"
+										cy="840"
+										rx="134"
+										ry="142"
+										style="
+											fill: #ffcfcf;
+											stroke: #777;
+											stroke-width: 3;
+										"
+									></ellipse>
+									<text
+										x="0"
+										y="0"
+										text-anchor="middle"
+										alignment-baseline="central"
+										style="fill: #000; font-size: 1.5rem"
+									>
+										<tspan x="1096" dy="732">Develop</tspan>
+										<tspan x="1096" dy="29">
+											strategic
+										</tspan>
+										<tspan x="1096" dy="29">
+											competencies
+										</tspan>
+										<tspan x="1096" dy="29">
+											&amp; the means
+										</tspan>
+										<tspan x="1096" dy="29">
+											for continuous
+										</tspan>
+										<tspan x="1096" dy="29">targeted</tspan>
+										<tspan x="1096" dy="29">
+											learning and
+										</tspan>
+										<tspan x="1096" dy="29">
+											knowledge
+										</tspan>
+										<tspan x="1096" dy="29">sharing</tspan>
+									</text>
+
+									<path
+										id="lineB"
+										marker-end="url(#arrow1)"
+										stroke-width="11"
+										fill="none"
+										stroke="red"
+										d="M832,144 L870,126"
+									></path>
+
+									<path
+										id="lineC"
+										marker-end="url(#arrow1)"
+										stroke-width="9"
+										fill="none"
+										stroke="red"
+										d="M908,444 L848,365"
+									></path>
+
+									<path
+										id="lineD"
+										marker-end="url(#arrow1)"
+										stroke-width="11"
+										fill="none"
+										stroke="red"
+										d="M1060,427 L1060,360"
+									></path>
+
+									<path
+										id="lineE"
+										marker-end="url(#arrow1)"
+										stroke-width="11"
+										fill="none"
+										stroke="red"
+										d="M-86,442 L-86,388"
+									></path>
+
+									<path
+										id="lineF"
+										marker-end="url(#arrow1)"
+										stroke-width="10"
+										fill="none"
+										stroke="red"
+										d="M108,114 L166,88"
+									></path>
+
+									<path
+										id="lineG"
+										marker-end="url(#arrow1)"
+										stroke-width="12"
+										fill="none"
+										stroke="red"
+										d="M-158,706 L-158,656"
+									></path>
+
+									<path
+										id="lineH"
+										marker-end="url(#arrow1)"
+										stroke-width="12"
+										fill="none"
+										stroke="red"
+										d="M298,706 L298,656"
+									></path>
+
+									<path
+										id="lineI"
+										marker-end="url(#arrow1)"
+										stroke-width="12"
+										fill="none"
+										stroke="red"
+										d="M674,706 L674,656"
+									></path>
+
+									<path
+										id="lineK"
+										marker-end="url(#arrow1)"
+										stroke-width="12"
+										fill="none"
+										stroke="red"
+										d="M1190,706 L1190,656"
+									></path>
+
+									<path
+										id="angle"
+										marker-end="url(#arrow1)"
+										stroke-width="12"
+										fill="none"
+										stroke="red"
+										d="M-190,286 L-190,146 L-128,146"
+									></path>
+
+									<defs>
+										<marker
+											id="arrow1"
+											viewBox="0 0 20 20"
+											refX="2"
+											refY="5"
+											markerWidth="6"
+											markerHeight="8"
+											orient="auto-start-reverse"
+										>
+											<path
+												d="M 0 0 L 5 5 L 0 10 z"
+												fill="red"
+											/>
+										</marker>
+
+										<marker
+											id="arrow2"
+											viewBox="0 0 8 8"
+											refX="2"
+											refY="5"
+											markerWidth="6"
+											markerHeight="8"
+											orient="auto-start-reverse"
+										>
+											<path
+												d="M 0 0 L 5 5 L 0 10 z"
+												fill="red"
+											/>
+										</marker>
+									</defs>
+
+									<path
+										id="line0"
+										marker-end="url(#arrow1)"
+										stroke-width="10"
+										fill="none"
+										stroke="red"
+									>
+										<animate
+											dur="3s"
+											repeatCount="1"
+											attributeName="d"
+											values="M242,288 L242,288; M242,288 L132,176"
+											fill="freeze"
+										/>
+									</path>
+
+									<path
+										id="line1"
+										marker-end="url(#arrow1)"
+										stroke-width="10"
+										fill="none"
+										stroke="red"
+									>
+										<animate
+											dur="4s"
+											repeatCount="1"
+											attributeName="d"
+											values="M675,282 L675,282; M675,282 L186,182"
+											fill="freeze"
+										/>
+									</path>
+
+									<path
+										id="line2"
+										marker-end="url(#arrow1)"
+										stroke-width="10"
+										fill="none"
+										stroke="red"
+									>
+										<animate
+											dur="6s"
+											repeatCount="1"
+											attributeName="d"
+											values="M962,268 L962,268; M962,268 L182,150"
+											fill="freeze"
+										/>
+									</path>
+
+									<path
+										id="line3"
+										marker-end="url(#arrow1)"
+										stroke-width="10"
+										fill="none"
+										stroke="red"
+									>
+										<animate
+											dur="4s"
+											repeatCount="1"
+											attributeName="d"
+											values="M876,102 L876,102; M876,102 L474,74"
+											fill="freeze"
+										/>
+									</path>
+
+									<path
+										id="line4"
+										marker-end="url(#arrow1)"
+										stroke-width="8"
+										fill="none"
+										stroke="red"
+									>
+										<animate
+											dur="5s"
+											repeatCount="1"
+											attributeName="d"
+											values="M386,486 L386,486; M386,486 L998,352"
+											fill="freeze"
+										/>
+									</path>
+
+									<path
+										id="line5"
+										marker-end="url(#arrow1)"
+										stroke-width="12"
+										fill="none"
+										stroke="red"
+									>
+										<animate
+											dur="4s"
+											repeatCount="1"
+											attributeName="d"
+											values="M364,456 L364,456; M364,456 L652,326"
+											fill="freeze"
+										/>
+									</path>
+
+									<path
+										id="curve1"
+										marker-end="url(#arrow2)"
+										stroke-width="4"
+										fill="none"
+										stroke="red"
+										d="M 200,660 C 1714,862 1124,160 1088,140"
+									></path>
+
+									<path
+										id="curve2"
+										stroke-width="4"
+										fill="none"
+										stroke="red"
+										d="M 578,662 C 720,710 730,686 730,698"
+									></path>
+
+									<path
+										id="curve3"
+										stroke-width="4"
+										fill="none"
+										stroke="red"
+										d="M 958,618 C 975,626 1080,624 1174,570"
+									></path>
+
+									<path
+										id="curve4"
+										stroke-width="4"
+										fill="none"
+										stroke="red"
+										d="M 802,510 C 975,560 1080,590 1204,530"
+									></path>
+
+									<text
+										x="0"
+										y="10"
+										text-anchor="left"
+										alignment-baseline="central"
+										fill="#000"
+										font-size="1.6rem"
+										font-weight="bold"
+									>
+										<tspan x="-226" dy="28">Revenue</tspan>
+										<tspan x="-226" dy="28">Growth</tspan>
+									</text>
+									<text
+										x="0"
+										y="10"
+										text-anchor="left"
+										alignment-baseline="central"
+										fill="#000"
+										font-size="1.6rem"
+										font-weight="bold"
+									>
+										<tspan x="1060" dy="28">
+											Productivity
+										</tspan>
+										<tspan x="1060" dy="28">
+											Improvement
+										</tspan>
+									</text>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid" id="balance">
+						<div class="row">
+							<div class="col-0 col-sm-1"></div>
+
+							<div class="col-12 col-sm-10 text-center">
+								<h4>Balance Scorecard</h4>
+
+								<div class="cards">
+									<div class="column">
+										<div>
+											<h2>Increase Shareholder Value</h2>
+											<p>
+												Return on Net Operating Assets
+												(RONOA) = EBIT / (Operating
+												Assets - NIB Liabilities)<br />Return
+												on Equity = Net Profit after Tax
+												/ Average Equity Economic Value
+												Added (EVA)
+											</p>
+										</div>
+										<div>
+											<h2>Increase Operating Revenue</h2>
+											<p>
+												Iason's Average daily TCE rate /
+												BPI (4TC routes rate)
+											</p>
+										</div>
+										<div>
+											<h2>Maximize Cost Effectiveness</h2>
+											<p>
+												% change in average daily OpEx
+												(per vessel) over previous
+												fiscal period
+												(Inflation-Adjusted)<br />%
+												change in Iason's G&A expenses
+												over previous fiscal period (in
+												local currency - €)
+											</p>
+										</div>
+										<div>
+											<h2>
+												Source Maximum & Low Cost
+												Capital
+											</h2>
+											<p>
+												Average days payable<br />Average
+												effective interest rate – LIBOR
+												Net Debt / Net Operating Assets
+											</p>
+										</div>
+									</div>
+
+									<div class="column">
+										<div>
+											<h2>
+												Deliver my cargoes timely and
+												intact
+											</h2>
+											<p>
+												% on-time deliveries (Number of
+												discharges within charter-party
+												time slot divided by total
+												number of discharges)<br />% of
+												discharges giving rise to cargo
+												claims (Number of claims for
+												cargo damage divided by total
+												number of discharges)
+											</p>
+										</div>
+										<div>
+											<h2>
+												Transport my cargoes with large,
+												modern and economical vessels
+											</h2>
+											<p>
+												Average customer rating for
+												vessels' cargo intake capacity,
+												fuel efficiency and age compared
+												to average Panamax (Cust.
+												survey)
+											</p>
+										</div>
+										<div>
+											<h2>
+												Become my preferred supplier by
+												knowing and meeting my needs
+											</h2>
+											<p>
+												Average customer rating in
+												overall satisfaction (Cust.
+												survey)<br />% of charterers
+												considering Iason as a preferred
+												supplier (Cust. survey)
+											</p>
+										</div>
+									</div>
+
+									<div class="column">
+										<div>
+											<h2>
+												Identify & Respond to Customers
+												Needs
+											</h2>
+											<p>
+												# of actions taken to respond to
+												customer needs
+											</p>
+										</div>
+										<div>
+											<h2>Manage Risks Effectively</h2>
+											<p>
+												# of vessel detentions - Average
+												# of detentions per vessel per
+												year (in scored period)<br />Losses
+												incurred from manageable risks -
+												Net total losses (costs &amp;
+												lost revenue in scored period)
+												due to the incurrence of
+												manageable business risks
+												divided by total opex (prior
+												fiscal period)
+											</p>
+										</div>
+										<div>
+											<h2>
+												Improve Environmental & Safety
+												Performance Standards
+											</h2>
+											<p>
+												# of environmental &amp; safety
+												non-conformities - identified
+												internally per vessel per
+												year<br /># of PSC
+												findings/deficiencies - per
+												vessel per year relevant to
+												Environmental &amp; Safety
+												Regulations
+											</p>
+										</div>
+									</div>
+
+									<div class="column">
+										<div>
+											<h2>
+												Select Appropriate Suppliers &
+												Contractors
+											</h2>
+											<p>
+												% of procurement orders with
+												identified failures or
+												non-conformities
+											</p>
+										</div>
+										<div>
+											<h2>
+												Achieve Cost Leadership in our
+												Segment
+											</h2>
+											<p>
+												% of procurement orders with
+												identified failures or
+												non-conformities% of average
+												daily OpEx / industry average
+												(per vessel)
+											</p>
+										</div>
+										<div>
+											<h2>
+												Maximize Vessels Utilization
+											</h2>
+											<p>
+												% of available days (on charter
+												+ idle + ballast days) /
+												ownership days<br />% of days on
+												charter / available days<br />Average
+												# of days rendered off hire
+												while on charter
+											</p>
+										</div>
+										<div>
+											<h2>
+												Provide me with a reliable
+												overall service
+											</h2>
+											<p>
+												# of charterers' complaints per
+												vessel<br /># of incidents
+												giving rise to hire deductions
+												while chartered per vessel
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-0 col-sm-1"></div>
+						</div>
+					</div>
+
+					<div class="container-fluid" id="strategy">
+						<div class="row">
+							<div class="col-0 col-sm-1"></div>
+
+							<div class="col-12 col-sm-10 text-center">
+								<h4>Strategy Statement</h4>
+								<p>
+									By leveraging our long shipping experience
+									and increasingly cost-efficient operation,
+									as well as, through carefully timed and
+									negotiated acquisitions of modern
+									medium-sized bulk carriers, we will grow and
+									rejuvenate our fleet and provide our
+									customers with distinctly reliable seaborne
+									transportation services focused on the coal,
+									grains, fertilizers and minerals trades,
+									while generating superior returns for our
+									shareholders and steadily increasing our
+									footprint.
+								</p>
+							</div>
+
+							<div class="col-0 col-sm-1"></div>
+						</div>
+					</div>
+
+					<div class="container-fluid" id="vision">
+						<div class="row">
+							<div class="col-0 col-sm-1"></div>
+
+							<div class="col-12 col-sm-10 text-center">
+								<h4>Vision, Mission & Core Values</h4>
+
+								<h5>Vision</h5>
+								<p>
+									To be recognised as a leading shipping
+									company in the global seaborne
+									transportation of coal, minerals, grains and
+									fertilizers with an aggregate annual cargo
+									volume lift of 10 million tonnes by 2020.
+								</p>
+
+								<h5>Mission</h5>
+								<p>
+									MissionTo provide distinctly reliable
+									seaborne transportation services to
+									shippers, receivers of cargo and vessel
+									operators in the dry bulk commodities
+									industry.
+								</p>
+
+								<h5>Core Values</h5>
+								<p>
+									Our core values are founded on three
+									distinct pillars: Safety, Reliability and
+									Care.
+								</p>
+								<ul>
+									<li>
+										Maximum safety –for our people, our
+										vessels and our cargoes
+									</li>
+									<li>
+										Reliable quality –for our services
+										extended to our customers
+									</li>
+									<li>
+										Continuous self-improvement –for our
+										people, our infra-structure and our
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-0 col-sm-1"></div>
+						</div>
+					</div>
+
+					<div class="container-fluid" id="footer">
+						<div>
+							<p>Business Consulting 2017-2021</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-0 col-lg-1"></div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				// Add smooth scrolling to all links
+				$("#main-menu a").on("click", function (event) {
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+						// Prevent default anchor click behavior
+						event.preventDefault();
+
+						// Store hash
+						var hash = this.hash;
+
+						// Using jQuery's animate() method to add smooth page scroll
+						// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+						$("html, body").animate(
+							{
+								scrollTop: $(hash).offset().top,
+							},
+							800,
+							function () {
+								// Add hash (#) to URL when done scrolling (default click behavior)
+								window.location.hash = hash;
+							}
+						);
+					} // End if
+				});
+			});
+		</script>
+
+		<script src="./js/clock.js"></script>
+	</body>
 </html>

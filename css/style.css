@@ -8,8 +8,8 @@ h4 {
 	color: #000;
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
-	padding-bottom: 1px;
-	margin-top: 1.2rem;
+	padding-bottom: 4px;
+	margin: 4rem auto 1.5rem auto;
 }
 h5 {
 	font-size: 1.1rem;
@@ -52,8 +52,8 @@ ul {
 	padding-left: 0;
 }
 #map h4 {
-	margin-top: 0.2rem;
-	margin-bottom: 0.1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 #svg-map img {
 	opacity: 0;
@@ -72,20 +72,27 @@ svg {
 }
 #strategy p {
 	padding: 0 10px;
+	max-width: 800px;
+	margin: 0 auto;
 }
-#vision p {
+#vision p,
+#vision ul {
 	padding: 0 10px;
+	max-width: 800px;
+	margin: 0 auto;
 }
 #vision ul {
 	font-size: 0.9rem;
+	padding-left: 2rem;
 }
 #footer {
 	background-color: #0b197a;
+	margin-top: 3rem;
 }
 #footer p {
 	text-align: center;
 	color: #fff;
-	padding: 8px;
+	padding: 20px;
 	margin-bottom: 0;
 }
 .nav-link {
@@ -106,7 +113,7 @@ svg {
 	padding-left: 0;
 }
 #title h2 {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 1;
 }
 #balance h2 {
@@ -118,7 +125,7 @@ svg {
 }
 
 #logo {
-	text-align: center;
+	text-align: left;
 }
 #logo img {
 	max-width: 90%;
@@ -146,8 +153,8 @@ svg {
 }
 #perspectives p {
 	text-align: center;
-	margin-top: 4.4rem;
 	color: #a00;
+	font-size: 1rem;
 	font-weight: bold;
 }
 #main-menu ul {
@@ -163,10 +170,6 @@ svg {
 	}
 	#title {
 		text-align: left;
-	}
-	#title h2 {
-		font-size: 1.2rem;
-		line-height: 1;
 	}
 	#header {
 		background-image: url(../images/repeat_bg.jpg);
@@ -211,12 +214,17 @@ svg {
 
 @media only screen and (min-width: 1200px) {
 	#perspectives {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	#main-menu ul {
 		padding-left: 4rem;
 	}
 	.nav-item {
 		margin-right: 1.8rem;
+	}
+	#logo {
+		text-align: left;
 	}
 }
